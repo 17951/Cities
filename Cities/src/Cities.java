@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,25 +22,27 @@ public class Cities {
 		list2.add("Pisz");
 		provinces.put("WarminskoMazurskie", list2);
 	}
-	public List<String> provinces(){
-		
+
+	public Collection<String> provinces() {
+		return provinces.keySet();
 	}
-	public List<String> cities(String province){
-		
-		
+
+	public List<String> cities(String province) {
+		return provinces.get(province);
+
 	}
-	
-	public Map<String,String> provinceWithOneCity(){
-		
+//
+//	public Map<String, String> provinceWithOneCity() {
+//
+//	}
+//
+//	public Collection<String> cities() {
+//
+//	}
+
+	public static void main(String[] args) {
+		Cities city = new Cities();
+		System.out.println(city.provinces);
+
 	}
-	public Collection<String> cities(){
-		
-	}
-	
-public static void main(String[] args) {
-	Cities city=new Cities();
-	System.out.println(city.provinces);
-	
-	
-}
 }
