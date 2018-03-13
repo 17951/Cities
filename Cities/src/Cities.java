@@ -31,14 +31,14 @@ public class Cities {
 		return provinces.get(province);
 
 	}
-//
-//	public Map<String, String> provinceWithOneCity() {
-//
-//	}
-//
-//	public Collection<String> cities() {
-//
-//	}
+
+	public Map<String, String> provinceWithOneCity() {
+
+	}
+
+	public Collection<String> cities() {
+
+	}
 
 	public static void main(String[] args) {
 		Cities city = new Cities();
