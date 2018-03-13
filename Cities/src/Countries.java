@@ -20,17 +20,21 @@ public class Countries {
 		return countries.toString();
 	}
 
-	public Collection<String> countries(){
-		return
+	public Collection<String> countries() {
+		return countries.keySet();
 	}
 
-	public Collection<String> capitals(){
-		return
+	public Collection<String> capitals() {
+		return countries.values();
 	}
 
 	public static void main(String[] args) {
 		Countries c = new Countries();
 		System.out.println(c);
+		Collection<String> country=c.countries();
+		Collection<String> capital=c.capitals();
+		System.out.println(country.toString());
+		System.out.println(capital.toString());
 
 	}
 }
