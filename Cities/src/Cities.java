@@ -33,16 +33,25 @@ public class Cities {
 	}
 
 	public Map<String, String> provinceWithOneCity() {
-
+		 Map<String,String> map = new HashMap();
+		for(String  key:provinces.keySet()) {
+			List<String> list=provinces.get(key);
+			String city=list.get(0);
+			map.put(key, city);
+			
+		}
+		return map;
 	}
 
-	public Collection<String> cities() {
-
+	public Collection<List<String>> cities() {
+		return provinces.values();
 	}
 
 	public static void main(String[] args) {
 		Cities city = new Cities();
 		System.out.println(city.provinces);
+		System.out.println();
+		System.out.println(city.cities());
 
 	}
 }
